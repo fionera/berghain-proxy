@@ -30,5 +30,6 @@ COPY berghain.yaml /berghain/config.yaml
 COPY supervisord.conf /etc/supervisord.conf
 
 USER haproxy
+EXPOSE 8080
 ENTRYPOINT ["supervisord", "--nodaemon", "--configuration", "/etc/supervisord.conf"]
 
